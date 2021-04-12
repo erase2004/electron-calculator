@@ -1,0 +1,77 @@
+$buttons: clear, divide, multiply, subtract, add, equal, dot, zero, one, two, three, four, five, six, seven, eight, nine
+$title-bar-height: 30px
+
+@mixin btn-style($class)
+  .btn.#{$class}
+      grid-area: $class
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+body
+  display: flex
+  width: 100vw
+  height: 100vh
+  justify-content: center
+  align-items: center
+
+  .container
+    width: 100vw
+    height: 100vh
+    padding: 0.25em
+    background-color: lightblue
+    
+  .display-area
+    grid-area: display
+    white-space: nowrap
+    text-align: right
+    overflow: hidden
+    
+    .formula
+      font-family: digital
+      font-size: 18px
+      line-height: 35px
+      height: 45%
+    .current
+      font-family: digital
+      font-size: 27px
+      line-height: 43px
+      height: 55%
+  
+  .btn
+    font-size: 1.25em
+    font-weight: 700
+    color: white
+    border: 1px solid lightblue
+    transition: color .25s, background .25s
+    
+    &.btn-number
+      background: slategrey
+    &.btn-operator
+      background: dimgrey
+    &.clear
+      background: palevioletred
+    &.equal
+      background: midnightblue
+
+    &.active
+      color: grey
+      background: white
+    
+    &:focus
+      outline: none
+
+  @each $class in $buttons
+    @include btn-style($class)
+  
+  .wrapper
+    width: 100%
+    height: 100%
+    display: grid
+    grid-template-columns: repeat(4, 25%)
+    grid-template-rows: #{$title-bar-height} 1fr repeat(5, 16%)
+    grid-template-areas: ". . . ." "display display display display" "clear   clear   divide  multiply" "seven   eight   nine    subtract" "four    five    six     add" "one     two     three   equal" "zero    zero    dot     equal"
+    
+      

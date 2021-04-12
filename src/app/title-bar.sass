@@ -1,0 +1,46 @@
+$title-bar-height: 30px
+
+.title-bar
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: #{$title-bar-height}
+  display: flex
+  justify-content: space-between
+  background-color: darkgrey
+  -webkit-app-region: drag
+
+  .title-area
+    display: inline-flex
+    height: 100%
+    color: white
+    align-items: center
+    
+    div
+      font-size: 1em
+      padding-left: 2px
+      padding-right: 2px
+
+    .app-icon > img
+      height: #{$title-bar-height}
+
+  .control-area
+    height: 100%
+    
+    button
+      height: inherit
+      font-size: 1em
+      background: transparent
+      color: white
+      border: none
+      padding-left: 5px
+      padding-right: 5px
+      -webkit-app-region: no-drag
+
+      &:hover
+        background-color: grey
+      
+      &:focus
+        outline: none
+

@@ -1,0 +1,70 @@
+{
+  "name": "electron-calculator",
+  "version": "1.0.0",
+  "description": "Calculator build on TypeScript, React and Electron",
+  "main": "build/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "react:dev": "webpack serve --mode=development",
+    "electron:dev": "nodemon",
+    "dev": "concurrently --kill-others \"npm run react:dev\" \"npm run electron:dev\"",
+    "start": "npm run build && electron build/main.js",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "keywords": [],
+  "author": "Tsuki Akiba",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "concurrently": "^6.0.0",
+    "css-loader": "^5.1.3",
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5",
+    "electron-is-dev": "^2.0.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-typescript": "^0.14.0",
+    "html-webpack-plugin": "^5.3.1",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.18",
+    "typescript": "^4.2.3",
+    "typescript-eslint-parser": "^22.0.0",
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "build": {
+    "extends": null,
+    "productName": "Electron Calculator",
+    "files": [
+      "build/*",
+      "assets/**/*"
+    ],
+    "directories": {
+      "output": "dist/"
+    },
+    "win": {
+      "icon": "assets/icons/calculator.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14"
+  }
+}

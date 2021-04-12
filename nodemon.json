@@ -1,0 +1,10 @@
+{
+  "watch": [ 
+    "src/main.ts",
+    "src/renderer.tsx",
+    "src/app/*",
+    "src/preload/*"
+  ],
+  "exec": "npm run build && electron ./build/main.js",
+  "ext": "ts,tsx,sass"
+}
