@@ -1,6 +1,17 @@
 # electron-calculator
 A calculator exercise for testing modern tools
 - - -
+![top language](https://img.shields.io/github/languages/top/erase2004/electron-calculator)
+[![liciense](https://img.shields.io/github/license/erase2004/electron-calculator)](https://github.com/erase2004/electron-calculator/blob/main/LICENSE)
+
+[![latest release](https://img.shields.io/github/v/release/erase2004/electron-calculator)](https://github.com/erase2004/electron-calculator/releases/latest/)
+![downloads](https://img.shields.io/github/downloads/erase2004/electron-calculator/latest/total)
+[![last commit](https://img.shields.io/github/last-commit/erase2004/electron-calculator)](https://github.com/erase2004/electron-calculator/commits/main)
+[![status of build action](https://github.com/erase2004/electron-calculator/actions/workflows/build.yml/badge.svg)](https://github.com/erase2004/electron-calculator/actions/workflows/build.yml)
+
+[![open issues](https://img.shields.io/github/issues-raw/erase2004/electron-calculator)](https://github.com/erase2004/electron-calculator/issues)
+[![open pull requests](https://img.shields.io/github/issues-pr-raw/erase2004/electron-calculator)](https://github.com/erase2004/electron-calculator/pulls)
+
 
 ## Project Preview
 ![Preview](assets/preview/preview.png)
@@ -64,4 +75,3 @@ Build distribution file
 
 ##  Todo List
 * Add Jest for unit testing
-* Add Github Action for CI/CD
