@@ -54,6 +54,12 @@
     "directories": {
       "output": "dist/"
     },
+    "mac": {
+      "icon": "assets/icons/calculator.png"
+    },
+    "linux": {
+      "icon": "assets/icons/calculator.png"
+    },
     "win": {
       "icon": "assets/icons/calculator.png"
     },
